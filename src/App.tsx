@@ -19,7 +19,7 @@ function App() {
       <div className="pt-[4.75rem] lg:pt-[6.25rem] overflow-hidden bg-gray-800 text-white min-h-screen">
         <section id="home" className="container mx-auto py-12">
           <h1 className="text-4xl font-bold mb-6">Welcome to Rollrush</h1>
-          <p className="text-lg">Your gateway to decentralized gaming. Play, compete, and win!</p>
+          <p className="text-lg">Your gateway to decentralized gaming. Play, compete, and win!!</p>
         </section>
 
         <section id="about" className="container mx-auto py-12">
@@ -35,6 +35,7 @@ function App() {
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-2">Dice Up</h3>
               <p>A classic dice rolling game with a twist.</p>
+
             </div>
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-2">Roll Up</h3>
