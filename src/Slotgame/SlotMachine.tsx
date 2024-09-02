@@ -17,6 +17,7 @@ import Reel from "./Reel";
 import Button from "./Button";
 import Bars from "./Bars";
 import { Fruit } from "./utils/enums";
+import { State } from "./stores/store";
 // import Casing from "./Casing";
 // import Bars from "./Bars";
 
@@ -33,21 +34,21 @@ interface SlotMachineProps {
 
 const SlotMachine = forwardRef(({ value }: SlotMachineProps, ref) => {
   // const valuesUrl = useGame((state) => state.valuesUrl);
-  const fruit0: Fruit = useGame((state) => state.fruit0);
-  const fruit1: Fruit = useGame((state) => state.fruit1);
-  const fruit2: Fruit = useGame((state) => state.fruit2);
-  const setFruit0 = useGame((state) => state.setFruit0);
-  const setFruit1 = useGame((state) => state.setFruit1);
-  const setFruit2 = useGame((state) => state.setFruit2);
+  const fruit0: Fruit = useGame((state: State) => state.fruit0);
+  const fruit1: Fruit = useGame((state: State) => state.fruit1);
+  const fruit2: Fruit = useGame((state: State) => state.fruit2);
+  const setFruit0 = useGame((state: State) => state.setFruit0);
+  const setFruit1 = useGame((state: State) => state.setFruit1);
+  const setFruit2 = useGame((state: State) => state.setFruit2);
   // const receivedSegments = useGame((state) => state.receivedSegments);
   // const setReceivedSegments = useGame((state) => state.setReceivedSegments);
   // const setSparkles = useGame((state) => state.setSparkles);
-  const phase = useGame((state) => state.phase);
-  const start = useGame((state) => state.start);
-  const end = useGame((state) => state.end);
-  const addSpin = useGame((state) => state.addSpin);
-  const coins = useGame((state) => state.coins);
-  const updateCoins = useGame((state) => state.updateCoins);
+  const phase = useGame((state: State) => state.phase);
+  const start = useGame((state: State) => state.start);
+  const end = useGame((state: State) => state.end);
+  const addSpin = useGame((state: State) => state.addSpin);
+  const coins = useGame((state: State) => state.coins);
+  const updateCoins = useGame((state: State) => state.updateCoins);
 
   // const fetchSegmentValues = async () => {
   //   try {

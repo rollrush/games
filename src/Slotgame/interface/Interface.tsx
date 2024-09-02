@@ -2,14 +2,14 @@
 // Licensed under the GNU Affero General Public License v3.0.
 // https://www.gnu.org/licenses/gpl-3.0.html
 
-import useGame from "../stores/store";
+import useGame, { State } from "../stores/store";
 import "./style.css";
 
 const Interface = () => {
   // const phase = useGame((state) => state.phase);
 
-  const coins = useGame((state) => state.coins);
-  const spins = useGame((state) => state.spins);
+  const coins = useGame((state: State) => state.coins);
+  const spins = useGame((state: State) => state.spins);
 
   return (
     <>

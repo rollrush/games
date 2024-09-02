@@ -1,8 +1,7 @@
-import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { rollrush } from "../assets";
-import { navigation } from "../constants";
+
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
@@ -22,12 +21,12 @@ const Header = () => {
     }
   };
 
-  const handleClick = () => {
-    if (!openNavigation) return;
+  // const handleClick = () => {
+  //   if (!openNavigation) return;
 
-    enablePageScroll();
-    setOpenNavigation(false);
-  };
+  //   enablePageScroll();
+  //   setOpenNavigation(false);
+  // };
 
   return (
     <div

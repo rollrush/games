@@ -1,6 +1,5 @@
-import { curve, heroBackground, roulette } from "../assets";
 import Benefits from "./Benefits";
-import Button from "./Button";
+
 import Heading from "./Heading";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";

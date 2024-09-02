@@ -3,7 +3,7 @@ import { subscribeWithSelector } from "zustand/middleware";
 import devLog from "../utils/functions/devLog";
 import { Fruit } from "../utils/enums";
 
-type State = {
+export type State = {
   // Endpoint
   // valuesUrl: string;
 
