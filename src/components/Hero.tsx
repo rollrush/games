@@ -1,6 +1,7 @@
 import { BackgroundCircles, BottomLine } from "./design/Hero";
 import { ScrollParallax } from "react-just-parallax";
 import React, { useRef } from "react";
+import Section from "./Section";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -18,7 +19,7 @@ const Hero = () => {
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient"></div>
         </div>
       </div>
-      <BackgroundCircles />
+      <BackgroundCircles parallaxRef={parallaxRef} />
       <BottomLine />
     </Section>
   );

@@ -1,11 +1,22 @@
 import SectionSvg from "../assets/svg/SectionSvg";
+import React, { ReactNode } from "react";
 
-const Section = ({
-  className,
+// Define the types for the props
+interface SectionProps {
+  className?: string;
+  id?: string;
+  crosses?: boolean;
+  crossesOffset?: string;
+  customPaddings?: boolean;
+  children: ReactNode;
+}
+
+const Section: React.FC<SectionProps> = ({
+  className = "",
   id,
-  crosses,
-  crossesOffset,
-  customPaddings,
+  crosses = false,
+  crossesOffset = "",
+  customPaddings = "",
   children,
 }) => {
   return (
@@ -15,9 +26,9 @@ const Section = ({
       relative 
       ${
         customPaddings ||
-        py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : ""}
+        `py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : ""}`
       } 
-      ${className || ""}`}
+      ${className}`}
     >
       {children}
 
@@ -28,7 +39,7 @@ const Section = ({
         <>
           <div
             className={`hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 ${
-              crossesOffset && crossesOffset
+              crossesOffset || ""
             } pointer-events-none lg:block xl:left-10 right-10`}
           />
           <SectionSvg crossesOffset={crossesOffset} />
