@@ -35,6 +35,7 @@ import {
   twitter,
   dym,
   capsule,
+  roulette,
 } from "../assets";
 
 export const navigation = [
@@ -84,7 +85,6 @@ export const brainwaveServices = [
   "Seamless Blockchain Integration",
 ];
 
-
 export const brainwaveServicesIcons = [
   recording03,
   recording01,
@@ -128,7 +128,6 @@ export const roadmap = [
     imageUrl: roadmap4,
   },
 ];
-
 
 export const collabText =
   "With decentralized architecture and robust security, Rollrush ensures seamless gameplay and asset ownership for gamers.";
@@ -212,7 +211,8 @@ export const pricing = [
   {
     id: "0",
     title: "Player",
-    description: "Access basic games, earn rewards, and own your in-game assets.",
+    description:
+      "Access basic games, earn rewards, and own your in-game assets.",
     price: "0",
     features: [
       "Access to basic decentralized games",
@@ -234,7 +234,8 @@ export const pricing = [
   {
     id: "2",
     title: "Enterprise",
-    description: "Custom games, large-scale tournaments, and dedicated support.",
+    description:
+      "Custom games, large-scale tournaments, and dedicated support.",
     price: null,
     features: [
       "Custom decentralized game development",
@@ -244,19 +245,19 @@ export const pricing = [
   },
 ];
 
-export const benefits = [
+export const games = [
   {
     id: "0",
-    title: "Play Anywhere",
-    text: "Play decentralized games from anywhere, on any device with secure asset transfers.",
+    title: "Roulette",
+    text: "Spin the wheel and win big with blockchain-backed rewards and secure asset transfers.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: roulette,
   },
   {
     id: "1",
-    title: "Earn While Playing",
-    text: "Earn valuable tokens and NFTs while playing your favorite decentralized games.",
+    title: "Magnetic Chess",
+    text: "Experience a new twist on classic games with magnetic interactions and blockchain-backed assets.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -264,35 +265,10 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Own Your Assets",
-    text: "Truly own your in-game assets with cross-chain NFT transfers and blockchain-backed ownership.",
+    title: "Slot Machines",
+    text: "Enjoy classic slot machines with blockchain-backed rewards and secure asset transfers.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "3",
-    title: "Fast Transactions",
-    text: "Experience fast and low-cost transactions with Layer 2 rollups for your gaming needs.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "4",
-    title: "Fair Play",
-    text: "AI-driven proctoring ensures fair play in tournaments and competitive games.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "5",
-    title: "Innovate Everyday",
-    text: "Stay ahead with continuous innovations in decentralized gaming technology.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
   },
 ];
