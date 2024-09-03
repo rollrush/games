@@ -3,13 +3,23 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { rollrush } from "../assets";
 
 import Button from "./Button";
+// import { ethers } from "ethers";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useWalletStore } from "../store/store";
+// import { useSDK } from "@metamask/sdk-react";
 
 const Header = () => {
   // const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+  const {
+    checkIfLoggedIn,
+    // toggleMenu,
+    walletAddress,
+    // isMenuOpen,
+    // updateWalletAddress,
+  } = useWalletStore();
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -21,6 +31,10 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    checkIfLoggedIn();
+    console.log(walletAddress, " this is wallet");
+  }, []);
   // const handleClick = () => {
   //   if (!openNavigation) return;
 
@@ -28,6 +42,24 @@ const Header = () => {
   //   setOpenNavigation(false);
   // };
 
+  const btnhandler = async () => {
+    // Asking if metamask is already present or not
+    console.log("btn handkers");
+
+    if ((window as any).ethereum) {
+      console.log("inside condition", (window as any).ethereum);
+      const accounts = await (window as any).ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      console.log(accounts);
+      // res[0] for fetching a first wallet
+      // (window as any).ethereum
+      //   .request({ method: "eth_requestAccounts" })
+      //   .then((res: any) => updateWalletAddress(res[0]));
+    } else {
+      alert("install metamask extension!!");
+    }
+  };
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
@@ -67,8 +99,8 @@ const Header = () => {
         >
           Capsule
         </Button>
-        <Button className="hidden lg:flex" href="https://app.rollrush.xyz/">
-          Metamask
+        <Button onClick={btnhandler} className="hidden lg:flex">
+          {walletAddress}
         </Button>
 
         <Button
