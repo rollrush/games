@@ -313,7 +313,7 @@ export class MagneticChessGame {
     let rectmain = createRectangle();
     rectmain.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     rectmain.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_TOP;
-    rectmain.topInPixels = 15;
+    rectmain.topInPixels = 95;
 
     rectp1.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
     rectp1.leftInPixels = 15;
@@ -352,7 +352,7 @@ export class MagneticChessGame {
       GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.mainBoardText.textVerticalAlignment =
       GUI.Control.VERTICAL_ALIGNMENT_TOP;
-    this.mainBoardText.paddingTopInPixels = 25;
+    this.mainBoardText.paddingTopInPixels = 105;
     guiTexture.addControl(this.mainBoardText);
   }
 
@@ -775,10 +775,13 @@ const MagneticBeads = () => {
   });
   return (
     <>
-      <canvas
-        id="renderCanvas"
-        style={{ width: "100%", height: "90%" }}
-      ></canvas>
+      <div className="">
+        <canvas
+          id="renderCanvas"
+          style={{ width: "100%", height: "90%" }}
+          className=""
+        ></canvas>
+      </div>
     </>
   );
 };
