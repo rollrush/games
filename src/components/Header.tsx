@@ -18,7 +18,7 @@ const Header = () => {
     // toggleMenu,
     walletAddress,
     // isMenuOpen,
-    // updateWalletAddress,
+    updateWalletAddress,
   } = useWalletStore();
 
   const toggleNavigation = () => {
@@ -35,12 +35,6 @@ const Header = () => {
     checkIfLoggedIn();
     console.log(walletAddress, " this is wallet");
   }, []);
-  // const handleClick = () => {
-  //   if (!openNavigation) return;
-
-  //   enablePageScroll();
-  //   setOpenNavigation(false);
-  // };
 
   const btnhandler = async () => {
     // Asking if metamask is already present or not
@@ -51,11 +45,9 @@ const Header = () => {
       const accounts = await (window as any).ethereum.request({
         method: "eth_requestAccounts",
       });
+
+      updateWalletAddress(accounts[0]);
       console.log(accounts);
-      // res[0] for fetching a first wallet
-      // (window as any).ethereum
-      //   .request({ method: "eth_requestAccounts" })
-      //   .then((res: any) => updateWalletAddress(res[0]));
     } else {
       alert("install metamask extension!!");
     }
@@ -99,8 +91,13 @@ const Header = () => {
         >
           Capsule
         </Button>
-        <Button onClick={btnhandler} className="hidden lg:flex">
-          {walletAddress}
+        <Button
+          onClick={btnhandler}
+          className="hidden lg:flex border border-1 rounded-lg"
+        >
+          {walletAddress.length > 17
+            ? `${walletAddress.substring(0, 10) + "..."}`
+            : walletAddress}
         </Button>
 
         <Button
