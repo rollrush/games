@@ -24,6 +24,11 @@
   resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-7.23.0.tgz#b88105584691b706eea23609dbaccdcb35e19629"
   integrity sha512-X8bpa6yNX+W62tw1w2GS4OCJoaJTAHDVADgchGjt7kez3FGizcH91bMYoDbmTM9UHNdxalyU25ZOfXKo6Vp8WQ==
 
+"@babylonjs/loaders@^7.23.0":
+  version "7.23.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-7.23.0.tgz#862e6d75ec8bfad1a1bd9a3652b9b714b146174a"
+  integrity sha512-f6GL0dfW34yCGAzVcPiWJZCs8P5d7W7ZfWEkTcfkZkf2a+B0GW3+iGXU0OD6iuICSCEnFj029Fy7nBTrS0sr7Q==
+
 "@celo/base@^6.0.1":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@celo/base/-/base-6.1.0.tgz#58a7a7cfb5d47bc9e680fe2e0eee58c234cb570b"

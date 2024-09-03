@@ -252,6 +252,7 @@ export const games = [
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: roulette,
+    link: "/roulette",
   },
   {
     id: "1",
@@ -261,6 +262,7 @@ export const games = [
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
     light: true,
+    link: "/magnetic-chess",
   },
   {
     id: "2",
@@ -269,6 +271,7 @@ export const games = [
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
+    link: "/slot-game",
   },
 ];
 

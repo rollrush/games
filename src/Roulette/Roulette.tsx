@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../style.css";
+import "./style.css";
 const Roulette = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -15,6 +15,7 @@ const Roulette = () => {
   }, [Link]);
   return (
     <div
+      id="roulette"
       style={{
         backgroundColor: "rgb(1,109,41)",
       }}
